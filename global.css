@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  margin-left: 29px ;
+}
+.appBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContainer {
+  box-shadow: none;
+  width: 100%;
+}
+
+.linkFormContainer {
+  border: 1px solid grey;
+  width: 100%;
+  border-radius: 8px 8px 0 0 ;
+  padding: 1rem;
+}
+
+.linkForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linkForm input[type=text]{
+  line-height: 1.8;
+}
+
+.shortURLButton {
+  border: none;
+  border-radius: 8px;
+  line-height: 30px;
+  padding: 0 0.8rem;
+  background: #063970;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.shortURLButton:hover {
+  background: #0a5eb8;
+}
+
+.shortURLButton:active{
+  background: #063970;
+}
+
+.shrinkedURLContainer {
+  border-right:1px solid grey;
+  border-left:1px solid grey;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.shortenedURLContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.URLHistoryContainer {
+  border: 1px solid grey;
+  border-radius: 0 0 8px 8px;
+  padding: 1rem;
+  width: 100%;
+}
