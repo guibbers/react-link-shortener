@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import "../global.css";
+import Header from "./components/Header";
+import HistoryList, { type HistoryItem } from "./components/HistoryList";
+import ShortenerForm from "./components/ShortenerForm";
 
 function App() {
 	const [originalURL, setOriginalURL] = useState("");
@@ -8,6 +11,16 @@ function App() {
 		{ original: string; shortened: string; timestamp: string }[]
 	>([]);
 	const [isLoading, setIsLoading] = useState(false);
+
+	const [history, setHistory] = useState<HistoryItem[]>([]);
+
+	const addToHistory = (item: { original: string; short: string }) => {
+		setHistory((prev) => [
+			{ ...item, date: new Date().toLocaleString() },
+			...prev,
+		]);
+	};
+
 	useEffect(() => {
 		console.log("isLoading mudou:", isLoading);
 	}, [isLoading]);
@@ -54,10 +67,11 @@ function App() {
 
 	return (
 		<div className="appBody">
-			<header>
-				<h1>LINK SHORTENER</h1>
-			</header>
-			<main>
+			<Header />
+			<ShortenerForm addToHistory={addToHistory} />
+			<HistoryList history={history} />
+
+			{/* <main>
 				<div className="mainContainer">
 					<div className="linkFormContainer">
 						<form className="linkForm" onSubmit={handleShortenLink}>
@@ -128,7 +142,7 @@ function App() {
 						</ol>
 					</div>
 				</div>
-			</main>
+			</main> */}
 		</div>
 	);
 }
