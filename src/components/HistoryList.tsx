@@ -13,7 +13,7 @@ export default function HistoryList({ history }: Props) {
 
 	return (
 		<div className="w-full max-w-xl mx-auto mt-10 px-4">
-			<h2 className="text-xl font-semibold mb-4 text-gray-800">Histórico</h2>
+			<h2 className="text-xl font-semibold mb-4 text-gray-800">History</h2>
 			<ul className="space-y-3">
 				{history.map((item, index) => (
 					<li

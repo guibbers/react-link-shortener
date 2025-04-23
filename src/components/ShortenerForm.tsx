@@ -41,7 +41,7 @@ export default function ShortenerForm({ addToHistory }: Props) {
 			>
 				<input
 					type="url"
-					placeholder="Digite a URL aqui"
+					placeholder="Type in URL"
 					value={url}
 					onChange={(e) => setUrl(e.target.value)}
 					className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
@@ -51,7 +51,7 @@ export default function ShortenerForm({ addToHistory }: Props) {
 					disabled={loading}
 					className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-md transition-colors disabled:opacity-50"
 				>
-					{loading ? "Shortening..." : "Encurtar"}
+					{loading ? "Shortening..." : "Shorten URL"}
 				</button>
 			</form>
 
